@@ -5,13 +5,23 @@
   font-family: sans-serif;
 }
 
+body {
+  background-color: black;
+}
+
 .container--modal {
   width: 100%;
-  height: 100vh;
-  background-color: black;
+  height: 10vh;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#calculator-close {
+  float: right;
+  padding: 0.125rem;
+  background-color: cornsilk;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .btn {
@@ -59,7 +69,7 @@
 }
 
 .popup button {
-  background-color: aquamarine;
+  background-color: white;
   margin-top: 0.5rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }/*# sourceMappingURL=styles.css.map */

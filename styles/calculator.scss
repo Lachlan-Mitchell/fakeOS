@@ -1,0 +1,43 @@
+*, *::before, *::after{
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-weight: normal;
+}
+
+#calculator button{
+  color: red;
+}
+
+.number {
+  color: blue !important;
+}
+.special {
+  @extend .number
+}
+
+#calculator-close {
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 25vh;
+  grid-template-columns:  repeat(5, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(4, 100px);
+}
+
+.calculator-grid  button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: lightgrey;
+}
+
+.span-five-three {
+  grid-column: span 2;
+}
+
