@@ -23,7 +23,8 @@
   align-content: center;
   min-height: 25vh;
   grid-template-columns: repeat(5, 100px);
-  grid-template-rows: minmax(120px, auto) repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  gap: 5px;
 }
 
 .calculator-grid button {
@@ -34,6 +35,30 @@
   background-color: lightgrey;
 }
 
-.span-five-three {
+.span-two {
   grid-column: span 2;
+}
+
+.output {
+  grid-column: 1/-1;
+  background-color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+  color: black;
+  margin-top: auto;
+}
+
+.output .previous-operand {
+  color: grey;
+  font-size: 1.5rem;
+}
+
+.output .current-operand {
+  color: black;
+  font-size: 2.5rem;
 }/*# sourceMappingURL=calculator.css.map */
