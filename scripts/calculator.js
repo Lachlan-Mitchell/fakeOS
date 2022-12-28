@@ -54,6 +54,7 @@ class Calculator {
     let specialComputation
     const current = parseFloat(this.currentOperand)
     const prev = parseFloat(this.previousOperand)
+    let operation = this.operation
     this.special = special
     if(isNaN(current)) return
     switch (this.special) {
@@ -65,6 +66,23 @@ class Calculator {
         break;
       case '1/x':
         specialComputation = 1 / current
+        break;
+      case '%':
+        if(isNaN(prev)) return
+        if(operation === '+'){
+          specialComputation = prev + ((current / 100) * prev)
+        } else if (operation === '-'){
+            specialComputation = prev - ((current / 100) * prev)
+        } else if (operation === '*'){
+          specialComputation = prev * ((current / 100) * prev)
+        } else if (operation === '*'){
+          specialComputation = prev * ((current / 100) * prev)
+        } else if (operation === '/'){
+          specialComputation = prev / ((current / 100) * prev)
+        } else {
+          return;
+        }
+        break;
     } 
     this.currentOperand = specialComputation
     this.operation = undefined
@@ -173,7 +191,7 @@ backspaceButton.addEventListener("click", button => {
 })
 
 specialOperationButtons.forEach(button => {
-  button.addEventListener("click", button => {
+  button.addEventListener("click", () => {
     calculator.specialOperation(button.innerText)
     calculator.updateDisplay()
   })
