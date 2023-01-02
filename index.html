@@ -1,22 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>fakeOS</title>
-</head>
-<body>
-  <h1>Hi and welcome to the fakeOS. it is currently underdevelopment!</h1>
-  <style>
-    body{
-      background-image:repeating-radial-gradient(circle, #6A9AC4, #6A6DC4 10%, #6AC4C1 15%);
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/calculator.css" />
+    <title>fakeOS</title>
+  </head>
+  <body>
+    <div id="navbar">
+      <nav>
+        <button id="start-button">
+          <img src="images/icons8-windows-95.svg" class="icon" /> Start
+        </button>
+        <div id="start-menu">
+          <div id="sidebar"></div>
+          <div class="os__name">Windows 98</div>
+          <ul>
+            <div class="menu-item">
+              <li>
+                <img
+                  src="https://res.cloudinary.com/penry/image/upload/v1474990247/directory_program_group_small_fqw8rr.ico"
+                  class="icon"
+                /><span> Programs</span>
+              </li>
+            </div>
+            <div class="menu-item">
+              <li>
+                <img
+                  src="https://res.cloudinary.com/penry/image/upload/w_65,h_65,c_lpad/v1474990246/directory_pictures_ualddt.png"
+                  class="icon"
+                /><span> Photos</span>
+              </li>
+            </div>
 
-    h1 {
-      text-align: center;
-    }
-  
-  </style>
-</body>
+            <div class="menu-item">
+              <li>
+                <img
+                  src="https://win98icons.alexmeub.com/icons/png/package-1.png"
+                  class="icon"
+                /><span class="menu-text"> Applications</span>
+              </li>
+            </div>
+
+            <div class="menu-item">
+              <li>
+                <img
+                  src="https://win98icons.alexmeub.com/icons/png/mshearts.png"
+                  class="icon"
+                /><span> Games</span>
+              </li>
+            </div>
+            <div class="menu-item">
+              <li>
+                <img
+                  src="https://res.cloudinary.com/penry/image/upload/q_100/v1474990280/settings_gear_zxd7tf.ico"
+                  class="icon"
+                /><span> Settings</span>
+              </li>
+            </div>
+
+            <div class="menu-item">
+              <li>
+                <img
+                  src="https://res.cloudinary.com/penry/image/upload/q_100/v1474990279/search_file_2_yy4muv.ico"
+                  class="icon"
+                /><span> Find</span>
+              </li>
+            </div>
+            <div class="menu-item">
+              <li>
+                <img
+                  src="https://res.cloudinary.com/penry/image/upload/v1474990254/help_book_small_ra0uhc.ico"
+                  class="icon"
+                /><span> Help</span>
+              </li>
+            </div>
+
+            <div class="menu-item">
+              <li>
+                <img
+                  src="https://res.cloudinary.com/penry/image/upload/v1474990231/application_hourglass_small_yyhy5z.ico"
+                  class="icon"
+                /><span> Run</span>
+              </li>
+            </div>
+
+            <div class="menu-item">
+              <li>
+                <img
+                  src="https://res.cloudinary.com/penry/image/upload/v1474990258/key_win_anpnfo.ico"
+                  class="icon"
+                /><span> Log off</span>
+              </li>
+            </div>
+
+            <div class="menu-item">
+              <li>
+                <img
+                  src="https://res.cloudinary.com/penry/image/upload/v1474990281/shut_down_normal_t24or4.ico"
+                  class="icon"
+                /><span> Shutdown</span>
+              </li>
+            </div>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="container--modal">
+      <button type="submit" class="btn btn--open">Take a peek</button>
+      <div class="popup" id="popup">
+        <img src="windows_98.png" />
+        <h2>This is the image i will choose</h2>
+        <p>congrats on making me pop up</p>
+        <button type="button" class="btn btn--close">Ive seen enough</button>
+      </div>
+    </div>
+    <div class="container--modal">
+      <button type="submit" class="btn btn--open" id="calculator-open">
+        Calculator
+      </button>
+      <!--re add popup!-->
+      <div class="popup" id="calculator">
+        <button id="calculator-close">X</button>
+        <div class="calculator-grid">
+          <div class="output">
+            <div class="previous-operand" data-previousOperand></div>
+            <div class="current-operand" data-currentOperand></div>
+          </div>
+          <button class="span-two" data-backspace>Backspace</button>
+          <button class="span-two" data-clearEntry>CE</button>
+          <button data-clearAll>C</button>
+          <button class="number" data-number>7</button>
+          <button class="number" data-number>8</button>
+          <button class="number" data-number>9</button>
+          <button data-operation>/</button>
+          <button class="special" data-specialOperation>sqrt</button>
+          <button class="number" data-number>4</button>
+          <button class="number" data-number>5</button>
+          <button class="number" data-number>6</button>
+          <button data-operation>*</button>
+          <button class="special" data-specialOperation>%</button>
+          <button class="number" data-number>1</button>
+          <button class="number" data-number>2</button>
+          <button class="number" data-number>3</button>
+          <button data-operation>-</button>
+          <button class="special" data-specialOperation>1/x</button>
+          <button class="number" data-number>0</button>
+          <button class="number" data-specialOperation>+/-</button>
+          <button class="special" data-number>.</button>
+          <button data-operation>+</button>
+          <button data-equals>=</button>
+        </div>
+      </div>
+    </div>
+    <script src="./scripts/scripts.js"></script>
+    <script src="./scripts/calculator.js"></script>
+  </body>
 </html>
