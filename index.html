@@ -11,9 +11,15 @@
   <body>
     <div id="navbar">
       <nav>
-        <button id="start-button">
+        <button id="start-button" class="button-off">
           <img src="images/icons8-windows-95.svg" class="icon" /> Start
         </button>
+        <div id="time" class="button-on">
+          <span id="hours">00</span>
+          <span>:</span>
+          <span id="minutes">00</span>
+          <span id="session">00</span>
+        </div>
         <div id="start-menu">
           <div id="sidebar"></div>
           <div class="os__name">Windows 98</div>
@@ -157,5 +163,6 @@
     </div>
     <script src="./scripts/scripts.js"></script>
     <script src="./scripts/calculator.js"></script>
+    <script src="./scripts/clock.js"></script>
   </body>
 </html>
