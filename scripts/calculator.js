@@ -1,6 +1,6 @@
-let openCalculator = document.getElementById("calculator-open");
-let closeCalculator = document.getElementById("calculator-close");
-let calculatorPopup = document.getElementById("calculator")
+let openCalculator = document.querySelector("#calculator-open");
+let closeCalculator = document.querySelector("#calculator-close");
+let calculatorPopup = document.querySelector("#calculator")
 
 const handleOpenCalculator  = () => {
   calculatorPopup.classList.add("open-popup");
