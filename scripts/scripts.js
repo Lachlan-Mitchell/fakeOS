@@ -18,8 +18,10 @@ const toggleStartMenu = () => {
   
   if (startMenu.style.display === "none") {
     startMenu.style.display = "flex";
+    startButton.classList.add("button-on")
   } else {
     startMenu.style.display = "none";
+    startButton.classList.remove("button-on")
   }
 }
 startButton.addEventListener("click", toggleStartMenu)
