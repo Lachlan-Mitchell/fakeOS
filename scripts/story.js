@@ -12,6 +12,7 @@ const handleCloseStory = () => {
   story.classList.remove("open-popup");
 }
 
+
 const handleOpenForm = () => {
   userForm.classList.add("open-popup");
 }
@@ -20,7 +21,7 @@ const handleCloseForm = () => {
 }
 formPopup.addEventListener("click", handleOpenForm);
 closeFormPopup.addEventListener("click", handleCloseForm);
-
+storyClose.addEventListener("click", handleCloseStory);
 
 formStory.addEventListener('submit', event => {
   event.preventDefault()
@@ -35,9 +36,10 @@ formStory.addEventListener('submit', event => {
   formData.number = document.querySelector('#number').value;
   formData.firstName = document.querySelector('#firstName').value;
   formData.firstName = document.querySelector('#firstName').value;
-  const story = `Hello my story go here`;
-  document.querySelector('#story-container').innerHTML = story;
+  const storyContent = `Hello my story go here`;
+  document.querySelector('#story-container').innerHTML = storyContent;
   handleOpenStory();
+  handleCloseForm();
 });
 
-storyClose.addEventListener('clcik', handleCloseStory());
+
