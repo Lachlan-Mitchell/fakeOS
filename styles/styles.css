@@ -149,7 +149,6 @@ body {
   transform: translate(-50%, -50%) scale(0.1);
   text-align: center;
   padding: 0 30px 30px;
-  color: salmon;
   visibility: hidden;
   transition: transform 0.4s, top 0.4s;
 }

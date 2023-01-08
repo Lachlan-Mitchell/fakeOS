@@ -25,14 +25,14 @@
   justify-content: center;
   align-content: center;
   min-height: 25vh;
-  grid-template-columns:  repeat(5, 100px);
-  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  grid-template-columns:  repeat(5, 5vw);
+  grid-template-rows: minmax(120px, auto) repeat(5, 10vh);
   gap: 5px;
 }
 
 .calculator-grid  button {
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1.5rem;
   border: 1px solid white;
   outline: none;
   background-color: lightgrey;

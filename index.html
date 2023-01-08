@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="stylesheet" href="./styles/calculator.css" />
+    <link rel="stylesheet" href ="./styles/story.css">
     <title>fakeOS</title>
   </head>
   <body>
@@ -124,53 +125,103 @@
       </div>
     </div>
     <div class="container--modal">
-      <button type="submit" class="btn btn--open" id="form-story-popup">Story Maker</button>
-      <div class="popup" id="user-form">
-        <button type="button" class="btn btn--close" id="form-close" >X</button>
-        <h2>Story Maker</h2>
+      <button type="submit" class="btn btn--open" id="form-story-popup">Story Maker</button>  
+      <div class="popup open-popup" id="user-form">
+          <button type="button" class="btn btn--close" id="form-close" >X</button>
+          <h2>Story Maker</h2>
+
+        <br />
         <p>
           Please enter information in all fields that apply to the label. After
           you hit submit you will have your very own personal story
         </p>
+        <br />
         <form id="form-story">
-          <label for="firstName">First Name: </label>
-          <input type="text" id="firstName" name="firstName" required />
+          <div id="container-form"> 
+            <div>
+              <label for="firstName">First Name: </label>
+              <br />
+              <input type="text" id="firstName" name="firstName" required />
+            </div>
+  
+            <div>
+              <label for="lastName">Last Name: </label>
+              <br />
+              <input type="text" id="lastName" name="lastName" required />
+            </div>
+  
+            <div>
+              <label for="animal">An Animal: </label>
+              <br />
+              <input type="text" id="animal" name="animal" required />
+            </div>
+  
+            <div>
+              <label for="exclamation">An Exclamation: </label>
+              <br />
+              <input type="text" id="exclamation" name="exclamation" required />
+            </div>
+  
+            <div>
+              <label for="adverb">An Adverb: </label>
+              <br />
+              <input type="text" id="adverb" name="adverb" required />
+            </div>
+  
+            <div>
+              <label for="transport">A mode of Transport: </label>
+              <br />
+              <input type="text" id="transport" name="transport" required />
+            </div>
+  
+            <div>
+              <label for="adjective">An Adjective: </label>
+              <br />
+              <input type="text" id="adjective" name="adjective" required />
+            </div>
+  
+            <div>
+              <label for="adjective-two">A differernt Adjective: </label>
+              <br />
+              <input type="text" id="adjective-two" name="adjective-two" required />
+            </div>
+  
+            <div>
+              <label for="number">A two-digit Number: </label>
+              <br />
+              <input type="number" id="number" name="number" required maxlength="2" minlength="2" />
+            </div>
+  
+            <div>
+              <label for="movie">A Movie: </label>
+              <br />
+              <input type="text" id="movie" name="movie" required />
+            </div>
+  
+            <div>
+              <label for="location">A location: </label>
+              <br />
+              <input type="text" id="location" name="location" required />
+            </div>
+  
+            <div>
+              <label for="noun">A Noun: </label>
+              <br />
+              <input type="text" id="noun" name="noun" required />
+            </div>
+          </div>
+          
 
-          <label for="lastName">Last Name: </label>
-          <input type="text" id="lastName" name="lastName" required />
-
-          <label for="animal">An Animal: </label>
-          <input type="text" id="animal" name="animal" required />
-
-          <label for="exclamation">An Exclamation: </label>
-          <input type="text" id="exclamation" name="exclamation" required />
-
-          <label for="adverb">An Adverb: </label>
-          <input type="text" id="adverb" name="adverb" required />
-
-          <label for="transport">A mode of Transport: </label>
-          <input type="text" id="transport" name="transport" required />
-
-          <label for="adjective">An Adjective: </label>
-          <input type="text" id="adjective" name="adjective" required />
-
-          <label for="number">A two-digit Number: </label>
-          <input type="number" id="number" name="number" required maxlength="2" minlength="2" />
-
-          <label for="movie">A Movie: </label>
-          <input type="text" id="movie" name="movie" required />
-
-          <label for="location">A location: </label>
-          <input type="text" id="location" name="location" required />
-
-          <button type="submit" class="btn btn--open" id="story-submit">Make my Story</button>
+          <div>
+            <button type="submit" class="btn btn--open" id="story-submit">Make my Story</button>
+          </div>
         </form>
       </div>
     </div>
     <div class="container--modal">
         <div class="popup" id="story">
-          <button type="button" class="btn btn--close" id="story-close">X</button>
           <div id="story-container"></div>
+          <button type="button" class="btn btn--close" id="story-close">The End</button>
         </div>
       </div>
       <div class="container--modal">
