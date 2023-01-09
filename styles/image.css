@@ -1,0 +1,99 @@
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create four equal columns that floats next to eachother */
+.column {
+  float: left;
+  width: 12.5%;
+  overflow: hidden;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Modal Content */
+.mySlides {
+  display: none;
+}
+
+#prev, #next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+}
+
+#next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+#prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+  padding-left: 1%;
+}
+
+#prev:hover,
+#next:hover {
+  background-color: rgba(43, 43, 43, 0.8);
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.thumbnail-image {
+  opacity: 0.6;
+}
+
+.active img {
+  opacity: 1;
+}
+
+.thumbnail-image:hover {
+  opacity: 1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+img {
+  transition: 0.3s;
+}
+
+.close {
+  color: black;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}/*# sourceMappingURL=image.css.map */

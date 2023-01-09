@@ -1,0 +1,31 @@
+#story {
+  font-size: 1.5rem;
+  color: rgb(20, 18, 18);
+  padding-top:1vh;
+  strong{
+    color: black;
+    font-weight: bold;
+  }
+}
+
+#form-story {
+  font-size: 1rem;
+  color: black;
+}
+
+#container-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  justify-content: center;
+  align-content: center;
+}
+
+#form-close {
+  float: right;
+  margin-top: 3%;
+  margin-left:-10% ;
+}
+
+
+

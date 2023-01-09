@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="stylesheet" href="./styles/calculator.css" />
+    <link rel="stylesheet" href ="./styles/story.css">
+    <link rel="stylesheet" href="./styles/image.css">
     <title>fakeOS</title>
   </head>
   <body>
@@ -115,15 +117,197 @@
       </nav>
     </div>
     <div class="container--modal">
-      <button type="submit" class="btn btn--open">Take a peek</button>
+      <button type="submit" class="btn btn--open">Photos</button>
       <div class="popup" id="popup">
-        <img src="windows_98.png" />
-        <h2>This is the image i will choose</h2>
-        <p>congrats on making me pop up</p>
-        <button type="button" class="btn btn--close">Ive seen enough</button>
+                    <div class="container-image">
+                      <button type="button" class="close btn btn--close">&times;</button>
+                      <div class="mySlides">
+                        <div class="numbertext">1 / 8</div>
+                        <img class="full-image" src="https://images.unsplash.com/photo-1524781289445-ddf8f5695861?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
+                      </div>
+
+                      <div class="mySlides">
+                        <div class="numbertext">2 / 8</div>
+                        <img class="full-image" src="https://images.unsplash.com/photo-1610194352361-4c81a6a8967e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80" draggable="false" />
+                      </div>
+
+                      <div class="mySlides">
+                        <div class="numbertext">3 / 8</div>
+                        <img class="full-image" src="https://images.unsplash.com/photo-1618202133208-2907bebba9e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
+                      </div>
+
+                      <div class="mySlides">
+                        <div class="numbertext">4 / 8</div>
+                        <img class="full-image" src="https://images.unsplash.com/photo-1495805442109-bf1cf975750b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
+                      </div>
+
+                      <div class="mySlides">
+                        <div class="numbertext">5 / 8</div>
+                        <img class="full-image" src="https://images.unsplash.com/photo-1548021682-1720ed403a5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
+                      </div>
+
+                      <div class="mySlides">
+                        <div class="numbertext">6 / 8</div>
+                        <img class="full-image" src="https://images.unsplash.com/photo-1496753480864-3e588e0269b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2134&q=80" draggable="false" />
+                      </div>
+
+                      <div class="mySlides">
+                        <div class="numbertext">7 / 8</div>
+                        <img class="full-image" src="https://images.unsplash.com/photo-1613346945084-35cccc812dd5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1759&q=80" draggable="false" />
+                      </div>
+
+                      <div class="mySlides">
+                        <div class="numbertext">8 / 8</div>
+                        <img class="full-image" src="https://images.unsplash.com/photo-1516681100942-77d8e7f9dd97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
+                      </div>
+                      <!--Need event listener and onclick events for prev and next, plus slides/minus slides-->
+                      <a id="prev">&#10094;</a>
+                      <a id="next">&#10095;</a>
+
+                      <div class="container-caption">
+                        <p id="caption"></p>
+                      </div>
+                      <!--Needs currentSlide event listener-->
+                      <div class="row">
+                          <div class="column">
+                            <img class="thumbnail-image cursor" id="0" src="https://images.unsplash.com/photo-1524781289445-ddf8f5695861?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" alt="River and Mountian-side Farmstead" />
+                          </div>
+    
+                          <div class="column">
+                            <img class="thumbnail-image cursor" id="1" src="https://images.unsplash.com/photo-1610194352361-4c81a6a8967e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80" draggable="false" alt="Neon Light on Rainy Footpath"/>
+                          </div>
+    
+                          <div class="column">
+                            <img class="thumbnail-image cursor" id="2" src="https://images.unsplash.com/photo-1618202133208-2907bebba9e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" alt="Sleeping Kitten"/>
+                          </div>
+    
+                          <div class="column">
+                            <img class="thumbnail-image cursor" id ="3" src="https://images.unsplash.com/photo-1495805442109-bf1cf975750b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" alt="Wooden Rope Bridge"/>
+                          </div>
+    
+                          <div class="column">
+                            <img class="thumbnail-image cursor" id="4" src="https://images.unsplash.com/photo-1548021682-1720ed403a5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" alt="Snowy Mountians"/>
+                          </div>
+    
+                          <div class="column">
+                            <img class="thumbnail-image cursor" id="5" src="https://images.unsplash.com/photo-1496753480864-3e588e0269b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2134&q=80" draggable="false" alt="Oldsmobile"/>
+                          </div>
+    
+                          <div class="column">
+                            <img class="thumbnail-image cursor"  id="6" src="https://images.unsplash.com/photo-1613346945084-35cccc812dd5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1759&q=80" draggable="false" alt="City Skyline"/>
+                          </div>
+    
+                          <div class="column">
+                            <img class="thumbnail-image cursor" id="7" src="https://images.unsplash.com/photo-1516681100942-77d8e7f9dd97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" alt="Grassy Meadow"/>
+                            </div>
+                        </div>
+                      </div>
+                     
+                    </div>
+        
       </div>
     </div>
     <div class="container--modal">
+      <button type="submit" class="btn btn--open" id="form-story-popup">Story Maker</button>  
+      <div class="popup" id="user-form">
+          <button type="button" class="btn btn--close" id="form-close" >X</button>
+          <h2>Story Maker</h2>
+
+        <br />
+        <p>
+          Please enter information in all fields that apply to the label. After
+          you hit submit you will have your very own personal story
+        </p>
+        <br />
+        <form id="form-story">
+          <div id="container-form"> 
+            <div>
+              <label for="firstName">First Name: </label>
+              <br />
+              <input type="text" id="firstName" name="firstName" required />
+            </div>
+  
+            <div>
+              <label for="lastName">Last Name: </label>
+              <br />
+              <input type="text" id="lastName" name="lastName" required />
+            </div>
+  
+            <div>
+              <label for="animal">An Animal: </label>
+              <br />
+              <input type="text" id="animal" name="animal" required />
+            </div>
+  
+            <div>
+              <label for="exclamation">An Exclamation: </label>
+              <br />
+              <input type="text" id="exclamation" name="exclamation" required />
+            </div>
+  
+            <div>
+              <label for="adverb">An Adverb: </label>
+              <br />
+              <input type="text" id="adverb" name="adverb" required />
+            </div>
+  
+            <div>
+              <label for="transport">A mode of Transport: </label>
+              <br />
+              <input type="text" id="transport" name="transport" required />
+            </div>
+  
+            <div>
+              <label for="adjective">An Adjective: </label>
+              <br />
+              <input type="text" id="adjective" name="adjective" required />
+            </div>
+  
+            <div>
+              <label for="adjective-two">A differernt Adjective: </label>
+              <br />
+              <input type="text" id="adjective-two" name="adjective-two" required />
+            </div>
+  
+            <div>
+              <label for="number">A two-digit Number: </label>
+              <br />
+              <input type="number" id="number" name="number" required maxlength="2" minlength="2" />
+            </div>
+  
+            <div>
+              <label for="movie">A Movie: </label>
+              <br />
+              <input type="text" id="movie" name="movie" required />
+            </div>
+  
+            <div>
+              <label for="location">A location: </label>
+              <br />
+              <input type="text" id="location" name="location" required />
+            </div>
+  
+            <div>
+              <label for="noun">A Noun: </label>
+              <br />
+              <input type="text" id="noun" name="noun" required />
+            </div>
+          </div>
+          
+
+          <div>
+            <button type="submit" class="btn btn--open" id="story-submit">Make my Story</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="container--modal">
+        <div class="popup" id="story">
+          <div id="story-container"></div>
+          <button type="button" class="btn btn--close" id="story-close">The End</button>
+        </div>
+      </div>
+      <div class="container--modal">
       <button type="submit" class="btn btn--open" id="calculator-open">
         Calculator
       </button>
@@ -164,5 +348,7 @@
     <script src="./scripts/scripts.js"></script>
     <script src="./scripts/calculator.js"></script>
     <script src="./scripts/clock.js"></script>
+    <script src="./scripts/story.js"></script>
+    <script src="./scripts/image.js"></script>
   </body>
 </html>

@@ -137,20 +137,20 @@ body {
   margin-top: 3px;
   padding: 6px;
   }
-.popup{
-  width: 50vw;
-  background-color: aliceblue;
-  border-radius: .75rem;
-  position: absolute;
-  top: 95%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.1);
-  text-align: center;
-  padding: 0 30px 30px;
-  color: salmon;
-  visibility: hidden;
-  transition: transform 0.4s, top 0.4s;
-}
+  .popup {
+    width: 50vw;
+    min-height: 25vh;
+    background-color: aliceblue;
+    border-radius: 0.75rem;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+  }
 
 .open-popup{
   visibility: visible;
