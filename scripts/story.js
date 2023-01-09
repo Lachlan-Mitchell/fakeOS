@@ -23,6 +23,11 @@ formPopup.addEventListener("click", handleOpenForm);
 closeFormPopup.addEventListener("click", handleCloseForm);
 storyClose.addEventListener("click", handleCloseStory);
 
+let storySelection = Math.floor((Math.random() * 3) + 1);
+let storyArray = [1, 2, 3];
+
+// close but doesnt quite work -- infinite loop? // need to check if this fixes it // works, need to check if it actually works when u play it
+
 formStory.addEventListener('submit', event => {
   event.preventDefault()
   const formData = {};
@@ -39,20 +44,17 @@ formStory.addEventListener('submit', event => {
   formData.movie = document.querySelector('#movie').value;
   formData.noun = document.querySelector('#noun').value;
 
-  let storySelection = Math.floor((Math.random() * 3) + 1);
-  let storyArray = [1, 2, 3]
   if(storyArray.length === 0){
     storyArray = [1,2,3];
   }
- // close but doesnt quite work -- infinite loop? // need to check if this fixes it // works, need to check if it actually works when u play it
+
   while (!storyArray.includes(storySelection)) {
-     storySelection = Math.floor((Math.random() * 3) + 1);
-     console.log('it didnt work yet')
-  }
- console.log('we found a matach');
+    storySelection = Math.floor((Math.random() * 3) + 1);
+ }
+ 
 
   if(storySelection === 1 && storyArray.includes(1)) {
-    let storyContent = `<strong>${formData.firstName}</strong> <strong>${formData.lastName}</strong> was walking through the <storng>${formData.location}</strong> when they saw a wild <strong>${formData.animal}</strong> chasing a <strong>${formData.adjective}</strong> <strong>${formData.noun}</strong>. Without hesitation, <strong>${formData.firstName}</strong> grabbed their <strong>${formData.transport}</strong> and chased after the <strong>${formData.animal}</strong>.
+    let storyContent = `<strong>${formData.firstName}</strong> <strong>${formData.lastName}</strong> was walking through the <strong>${formData.location}</strong> when they saw a wild <strong>${formData.animal}</strong> chasing a <strong>${formData.adjective}</strong> <strong>${formData.noun}</strong>. Without hesitation, <strong>${formData.firstName}</strong> grabbed their <strong>${formData.transport}</strong> and chased after the <strong>${formData.animal}</strong>.
 
   As they rode through the <storng>${formData.location}</strong>, <strong>${formData.firstName}</strong> remembered the <strong>${formData.movie}</strong> movie they had seen the night before and knew exactly what to do. They rode <strong>${formData.adverb}</strong> towards the <strong>${formData.adjectiveTwo}</strong> <strong>${formData.animal}</strong> and yelled out a <strong>${formData.exclamation}</strong> just as they had seen in <strong>${formData.movie}</strong>.
   
@@ -65,7 +67,7 @@ formStory.addEventListener('submit', event => {
   } else if (storySelection === 2 && storyArray.includes(2)) {
     let storyContent = `<strong>${formData.firstName}</strong> <strong>${formData.lastName}</strong> had always been a hopeless romantic, always searching for the perfect partner. But one day, while <strong>${formData.adverb}</strong> walking through the <strong>${formData.location}</strong>, they stumbled upon a <strong>${formData.adjective}</strong> <strong>${formData.noun}</strong> and fell head over heels in love.
 
-    The <strong>${formData.noun}</strong> was unlike anyone <strong>${formData.firstName}</strong> had ever met before - they were kind, <strong>${formData.number}</strong>, and had a great sense of humor. <strong>${formData.firstName}</strong> couldn't believe their luck and knew they had to find a way to win the <strong>${formData.noun}'s</strong> heart.
+    The <strong>${formData.noun}</strong> was unlike anyone <strong>${formData.firstName}</strong> had ever met before - they were kind, <strong>${formData.number}</strong>, has a pet <strong>${formData.animal}</strong> and had a great sense of humor. <strong>${formData.firstName}</strong> couldn't believe their luck and knew they had to find a way to win the <strong>${formData.noun}'s</strong> heart.
     
     They took every opportunity to be near the <strong>${formData.noun}</strong> and show them how much they cared. They even wrote them a <strong>${formData.adjectiveTwo}</strong> love letter and asked them to be their partner.
     
@@ -90,7 +92,7 @@ formStory.addEventListener('submit', event => {
     
     As the game began, <strong>${formData.firstName}</strong> could feel their heart racing. They played their cards <strong>${formData.adverb}</strong> and managed to hold their own against their opponents, but as the night wore on, the stakes only got higher.
     
-    Eventually, <strong>${formData.firstName}</strong> found themselves down to their last <strong>${formData.noun}</strong>. They knew they had to make a bold move if they wanted to win. With a deep breath, they placed all their <strong>${formData.noun}'s</strong> on the table and revealed their <strong>${formData.adjective}</strong> hand.
+    Eventually, <strong>${formData.firstName}</strong> found themselves down to their last <strong>${formData.noun}</strong> <strong>${formData.exclamation}</strong>. They knew they had to make a bold move if they wanted to win. With a deep breath, they placed all their <strong>${formData.noun}'s</strong> on the table and revealed their <strong>${formData.adjective}</strong> hand.
     
     To their surprise, their gamble paid off and they emerged victorious, winning the <strong>${formData.number}</strong> dollar prize and cementing their place in poker history as the winner of the most tense game in the world.`
     document.querySelector('#story-container').innerHTML = storyContent;    
@@ -98,10 +100,6 @@ formStory.addEventListener('submit', event => {
     handleCloseForm();
     storyArray.pop();
   }
-  
-  document.querySelector('#story-container').innerHTML = storyContent;
-  handleOpenStory();
-  handleCloseForm();
 });
 
 

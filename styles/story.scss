@@ -1,5 +1,5 @@
 #story {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: rgb(20, 18, 18);
   padding-top:1vh;
   strong{
@@ -27,5 +27,28 @@
   margin-left:-10% ;
 }
 
+@media screen and (max-width:1200px) {
+  #form-story {
+    font-size: .75rem;
+  }
+  #story {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width:1000px){
+  #form-story {
+    font-size: .5rem;
+  }
+  #story {
+    font-size: .75rem;
+  }
+}
 
-
+@media screen and (max-width:800px){
+  #form-story {
+    font-size: .45rem;
+  }
+  #story {
+    font-size: .5rem;
+  }
+}

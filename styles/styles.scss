@@ -91,23 +91,32 @@ body {
   height: 10vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
 }
-#calculator-close{
-  float: right;
-  padding: 0.125rem;
-  background-color: cornsilk;
-  box-shadow:0 2px 5px rgba($color: #000000, $alpha: 0.2) ;
-}
+
 .btn {
-  padding: 10px 40px;
-  background-color: aliceblue;
+  padding: 10px 10px;
   border: 0;
   outline: none;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: .5rem;
   font-weight: bold;
-  border-radius: 2rem;
+}
+
+.desktop-wrapper {
+  padding-left: 0.5vw;
+  width: fit-content;
+}
+.desktop-icon {
+  padding-top: 1vh;
+  text-align: center;
+}
+
+.desktop-text {
+  background-color: rgba(0, 128,128,1);
+  font-size: 1rem;
+  text-align: center;
+
 }
 
 
@@ -140,8 +149,7 @@ body {
   .popup {
     width: 50vw;
     min-height: 25vh;
-    background-color: aliceblue;
-    border-radius: 0.75rem;
+    background-color: #bdbdbd;
     position: absolute;
     top: 95%;
     left: 50%;
@@ -157,12 +165,12 @@ body {
   top: 50%;
   transform: translate(-50%, -50%) scale(1);
 }
-
 .popup img {
-  width: 25vw;
-  height: 25vh;
+  width: 10vw;
+  height: 10vh;
   box-shadow:0 2px 5px rgba($color: #000000, $alpha: 0.2) ;
 }
+
 .popup h2 {
   font-size: 2rem;
   font-weight: bold;
@@ -170,7 +178,27 @@ body {
 }
 
 .popup button {
-  background-color: white;
   margin-top: .5rem;
   box-shadow:0 2px 5px rgba($color: #000000, $alpha: 0.2) ;
+}
+
+@media screen and(max-width: 1200px) {
+  * {
+    font-size: 1rem;
+  }
+}
+
+@media screen and(max-width: 1000px) {
+  * {
+    font-size: .75rem;
+  }
+  
+
+}
+
+@media screen and(max-width: 800px) {
+  * {
+    font-size: .65rem;
+  }
+
 }
