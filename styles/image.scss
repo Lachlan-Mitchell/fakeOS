@@ -1,68 +1,5 @@
-.container-image {
-  position: relative;
-  min-height: 50vh;
-}
-
-.mySlides {
-  display: none;
-}
-
-/* Add a pointer when hovering over the thumbnail images */
-.cursor {
-  cursor: pointer;
-}
-
-/* Next & previous buttons */
-#prev,
-#next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-/* Position the "next button" to the right */
-#prev {
-  left: 0;
-  border-radius: 3px 0 0 3px;
-  color: black;
-}
-
-#next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-  color: black;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-#prev:hover,
-#next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: black;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* Container for image text */
-.caption-container {
-  text-align: center;
-  background-color: black;
-  padding: 2px 16px;
-  color: white;
+.row > .column {
+  padding: 0 8px;
 }
 
 .row:after {
@@ -71,19 +8,99 @@
   clear: both;
 }
 
-/* Six columns side by side */
+/* Create four equal columns that floats next to eachother */
 .column {
   float: left;
   width: 12.5%;
   overflow: hidden;
 }
 
-/* Add a transparency effect for thumnbail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Modal Content */
+// .contianer-image {
+//   position: relative;
+//   background-color: #fefefe;
+//   margin: auto;
+//   padding: 0;
+//   width: 90%;
+//   max-width: 1200px;
+// }
+
+.mySlides {
+  display: none;
+}
+
+#prev, #next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+#prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+  padding-left: 1%;
+}
+
+#prev:hover,
+#next:hover {
+  background-color: rgba(43, 43, 43, 0.8);
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white
+}
+
 .thumbnail-image {
   opacity: 0.6;
 }
 
-.active,
-.thumbnail-image:hover {
+.active {
+  img {
+    opacity: 1;
+  }
+}
+ .thumbnail-image:hover {
   opacity: 1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+img {
+  transition: 0.3s;
+}
+.close {
+  color: black;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
 }

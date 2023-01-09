@@ -117,9 +117,10 @@
       </nav>
     </div>
     <div class="container--modal">
-      <button type="submit" class="btn btn--open">Take a peek</button>
+      <button type="submit" class="btn btn--open">Photos</button>
       <div class="popup" id="popup">
                     <div class="container-image">
+                      <button type="button" class="close btn btn--close">&times;</button>
                       <div class="mySlides">
                         <div class="numbertext">1 / 8</div>
                         <img class="full-image" src="https://images.unsplash.com/photo-1524781289445-ddf8f5695861?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
@@ -169,45 +170,46 @@
                       <!--Needs currentSlide event listener-->
                       <div class="row">
                           <div class="column">
-                            <img class="thumbnail-image cursor" src="https://images.unsplash.com/photo-1524781289445-ddf8f5695861?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" alt="River and Mountian-side Farmstead" />
+                            <img class="thumbnail-image cursor" id="0" src="https://images.unsplash.com/photo-1524781289445-ddf8f5695861?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" alt="River and Mountian-side Farmstead" />
                           </div>
     
                           <div class="column">
-                            <img class="thumbnail-image cursor" src="https://images.unsplash.com/photo-1610194352361-4c81a6a8967e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80" draggable="false" alt="Neon Light on Rainy Footpath"/>
+                            <img class="thumbnail-image cursor" id="1" src="https://images.unsplash.com/photo-1610194352361-4c81a6a8967e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80" draggable="false" alt="Neon Light on Rainy Footpath"/>
                           </div>
     
                           <div class="column">
-                            <img class="thumbnail-image cursor" src="https://images.unsplash.com/photo-1618202133208-2907bebba9e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" alt="Sleeping Kitten"/>
+                            <img class="thumbnail-image cursor" id="2" src="https://images.unsplash.com/photo-1618202133208-2907bebba9e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" alt="Sleeping Kitten"/>
                           </div>
     
                           <div class="column">
-                            <img class="thumbnail-image cursor" src="https://images.unsplash.com/photo-1495805442109-bf1cf975750b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" alt="Wooden Rope Bridge"/>
+                            <img class="thumbnail-image cursor" id ="3" src="https://images.unsplash.com/photo-1495805442109-bf1cf975750b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" alt="Wooden Rope Bridge"/>
                           </div>
     
                           <div class="column">
-                            <img class="thumbnail-image cursor" src="https://images.unsplash.com/photo-1548021682-1720ed403a5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" alt="Snowy Mountians"/>
+                            <img class="thumbnail-image cursor" id="4" src="https://images.unsplash.com/photo-1548021682-1720ed403a5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" alt="Snowy Mountians"/>
                           </div>
     
                           <div class="column">
-                            <img class="thumbnail-image cursor" src="https://images.unsplash.com/photo-1496753480864-3e588e0269b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2134&q=80" draggable="false" alt="Oldsmobile"/>
+                            <img class="thumbnail-image cursor" id="5" src="https://images.unsplash.com/photo-1496753480864-3e588e0269b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2134&q=80" draggable="false" alt="Oldsmobile"/>
                           </div>
     
                           <div class="column">
-                            <img class="thumbnail-image cursor" src="https://images.unsplash.com/photo-1613346945084-35cccc812dd5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1759&q=80" draggable="false" alt="City Skyline"/>
+                            <img class="thumbnail-image cursor"  id="6" src="https://images.unsplash.com/photo-1613346945084-35cccc812dd5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1759&q=80" draggable="false" alt="City Skyline"/>
                           </div>
     
                           <div class="column">
-                            <img class="thumbnail-image cursor" src="https://images.unsplash.com/photo-1516681100942-77d8e7f9dd97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" alt="Grassy Meadow"/>
+                            <img class="thumbnail-image cursor" id="7" src="https://images.unsplash.com/photo-1516681100942-77d8e7f9dd97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" alt="Grassy Meadow"/>
                             </div>
                         </div>
                       </div>
+                     
                     </div>
-        <button type="button" class="btn btn--close">Ive seen enough</button>
+        
       </div>
     </div>
     <div class="container--modal">
       <button type="submit" class="btn btn--open" id="form-story-popup">Story Maker</button>  
-      <div class="popup open-popup" id="user-form">
+      <div class="popup" id="user-form">
           <button type="button" class="btn btn--close" id="form-close" >X</button>
           <h2>Story Maker</h2>
 

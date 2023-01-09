@@ -1,43 +1,47 @@
-let slides = document.getElementsByClassName('mySlides'); 
-let thumbnail = document.querySelectorAll(".thumbnail-image");
-let captionText = document.querySelector("#caption");
-const prev = document.querySelector('#prev')
-const next = document.querySelector('#next')
+const thumbnailText = document.querySelectorAll('.thumbnail-image')
+const thumbnails = document.querySelectorAll('.column');
+const fullImage = document.querySelectorAll('.mySlides');
+const prevButton = document.querySelector('#prev');
+const nextButton = document.querySelector('#next');
+const caption = document.querySelector('#caption')
 
 
-const showSlides = (n) => {
-  if(n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length
-  }
-  for(let i = 0; i <slides.length; i++){
-    slides[i].style.display ="none"
-  }
-  for(let i =0; i < thumbnail.length; i++){
-    thumbnail[i].className = thumbnail[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  thumbnail[slideIndex-1].className += " active";
-  captionText.innerHTML = thumbnail[slideIndex -1].alt;
-}
-let slideIndex = 1;
-showSlides(slideIndex);
 
-//next/rpev control
-const plusSlides = (n) => {
-  showSlides(slideIndex +=n)
-};
+fullImage[0].style.display = "block";
+thumbnails[0].classList.add('active');
+caption.innerHTML = thumbnailText[0].alt;
 
-//thumbnail image controls
+let currentIndex = 0;
 
-const currentSlide =(n) => {
-  showSlides(slideIndex = n)
-};
+thumbnails.forEach((thumbnail) => thumbnail.addEventListener('click' ,(event)=> {
+  const targetImage = event.target.closest('img');
 
-// need to re write like all of the functions lol
-prev.addEventListener('click', plusSlides)
-next.addEventListener('click', plusSlides)
+  if(!targetImage) return;
+  fullImage[currentIndex].style.display = "none";
+  thumbnails[currentIndex].classList.remove('active');
 
-thumbnail.forEach((small) => small.addEventListener('click', currentSlide));
+   currentIndex = parseInt(targetImage.id);
+   fullImage[currentIndex].style.display = "block";
+   thumbnails[currentIndex].classList.add('active');
+   caption.innerHTML = thumbnailText[currentIndex].alt;
+}));
+
+
+prevButton.addEventListener("click", (event)=> {
+  fullImage[currentIndex].style.display = "none";
+  thumbnails[currentIndex].classList.remove('active');
+  currentIndex = currentIndex > 0 ? currentIndex -1 : fullImage.length - 1;
+  fullImage[currentIndex].style.display = "block";
+  thumbnails[currentIndex].classList.add('active');
+  caption.innerHTML = thumbnailText[currentIndex].alt;
+});
+
+nextButton.addEventListener("click", (event)=> {
+
+  fullImage[currentIndex].style.display = "none";
+  thumbnails[currentIndex].classList.remove('active');
+  currentIndex = currentIndex < fullImage.length -1 ? currentIndex + 1 : 0;
+  fullImage[currentIndex].style.display = "block";
+  thumbnails[currentIndex].classList.add('active');
+  caption.innerHTML = thumbnailText[currentIndex].alt;
+});
