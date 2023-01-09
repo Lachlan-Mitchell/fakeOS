@@ -116,8 +116,14 @@
         </div>
       </nav>
     </div>
-    <div class="container--modal">
-      <button type="submit" class="btn btn--open">Photos</button>
+      <div class="desktop-wrapper">
+        <div type="submit" class="btn btn--open desktop-icon"><img
+          src="https://res.cloudinary.com/penry/image/upload/w_65,h_65,c_lpad/v1474990246/directory_pictures_ualddt.png"
+          class="desktop-icon"
+        /></div>
+        <div class="desktop-text"><span >Photos</span></div>
+      </div>
+      <div class="container--modal">
       <div class="popup" id="popup">
                     <div class="container-image">
                       <button type="button" class="close btn btn--close">&times;</button>
@@ -202,15 +208,61 @@
                             </div>
                         </div>
                       </div>
-                     
                     </div>
-        
       </div>
-    </div>
-    <div class="container--modal">
-      <button type="submit" class="btn btn--open" id="form-story-popup">Story Maker</button>  
+      
+      
+        <div class="desktop-wrapper">
+          <div type="submit" class="btn btn--open desktop-icon" id="calculator-open">
+            <img src="https://98.js.org/images/icons/calculator-32x32.png">
+            </div>
+          <div class="desktop-text"><span>Calculator</span></div>
+        </div>
+        <div class="container--modal"></div>
+      <!--re add popup!-->
+      <div class="popup" id="calculator">
+        <button id="calculator-close" class="close btn--close btn">X</button>
+        <div class="calculator-grid">
+          <div class="output">
+            <div class="previous-operand" data-previousOperand></div>
+            <div class="current-operand" data-currentOperand></div>
+          </div>
+          <button class="span-two" data-backspace>Backspace</button>
+          <button class="span-two" data-clearEntry>CE</button>
+          <button data-clearAll>C</button>
+          <button class="number" data-number>7</button>
+          <button class="number" data-number>8</button>
+          <button class="number" data-number>9</button>
+          <button data-operation>/</button>
+          <button class="special" data-specialOperation>sqrt</button>
+          <button class="number" data-number>4</button>
+          <button class="number" data-number>5</button>
+          <button class="number" data-number>6</button>
+          <button data-operation>*</button>
+          <button class="special" data-specialOperation>%</button>
+          <button class="number" data-number>1</button>
+          <button class="number" data-number>2</button>
+          <button class="number" data-number>3</button>
+          <button data-operation>-</button>
+          <button class="special" data-specialOperation>1/x</button>
+          <button class="number" data-number>0</button>
+          <button class="number" data-specialOperation>+/-</button>
+          <button class="special" data-number>.</button>
+          <button data-operation>+</button>
+          <button data-equals>=</button>
+        </div>
+      </div>
+      <div class="desktop-wrapper">
+        <div type="submit" class="btn btn--open desktop-icon" id="form-story-popup">
+          <img
+          src="https://res.cloudinary.com/penry/image/upload/v1474990254/help_book_small_ra0uhc.ico"
+        />
+        </div>
+        <div class="desktop-text"><span>Story</span></div>
+      </div>
+      <div class="container--modal">
       <div class="popup" id="user-form">
-          <button type="button" class="btn btn--close" id="form-close" >X</button>
+          <button type="button" class="close btn btn--close" id="form-close" >X</button>
           <h2>Story Maker</h2>
 
         <br />
@@ -305,43 +357,6 @@
         <div class="popup" id="story">
           <div id="story-container"></div>
           <button type="button" class="btn btn--close" id="story-close">The End</button>
-        </div>
-      </div>
-      <div class="container--modal">
-      <button type="submit" class="btn btn--open" id="calculator-open">
-        Calculator
-      </button>
-      <!--re add popup!-->
-      <div class="popup" id="calculator">
-        <button id="calculator-close">X</button>
-        <div class="calculator-grid">
-          <div class="output">
-            <div class="previous-operand" data-previousOperand></div>
-            <div class="current-operand" data-currentOperand></div>
-          </div>
-          <button class="span-two" data-backspace>Backspace</button>
-          <button class="span-two" data-clearEntry>CE</button>
-          <button data-clearAll>C</button>
-          <button class="number" data-number>7</button>
-          <button class="number" data-number>8</button>
-          <button class="number" data-number>9</button>
-          <button data-operation>/</button>
-          <button class="special" data-specialOperation>sqrt</button>
-          <button class="number" data-number>4</button>
-          <button class="number" data-number>5</button>
-          <button class="number" data-number>6</button>
-          <button data-operation>*</button>
-          <button class="special" data-specialOperation>%</button>
-          <button class="number" data-number>1</button>
-          <button class="number" data-number>2</button>
-          <button class="number" data-number>3</button>
-          <button data-operation>-</button>
-          <button class="special" data-specialOperation>1/x</button>
-          <button class="number" data-number>0</button>
-          <button class="number" data-specialOperation>+/-</button>
-          <button class="special" data-number>.</button>
-          <button data-operation>+</button>
-          <button data-equals>=</button>
         </div>
       </div>
     </div>

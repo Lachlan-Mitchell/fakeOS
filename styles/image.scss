@@ -32,6 +32,13 @@
 .mySlides {
   display: none;
 }
+.popup .full-image {
+  width: 40vw;
+  height: 20vw;
+}
+.popup .thumbnail-image {
+  width: 9vw;
+}
 
 #prev, #next {
   cursor: pointer;
@@ -94,7 +101,7 @@ img {
   position: absolute;
   top: 10px;
   right: 25px;
-  font-size: 35px;
+  font-size: 1vw;
   font-weight: bold;
 }
 

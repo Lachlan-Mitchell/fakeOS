@@ -1,5 +1,5 @@
 #story {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: rgb(20, 18, 18);
   padding-top: 1vh;
 }
@@ -25,4 +25,29 @@
   float: right;
   margin-top: 3%;
   margin-left: -10%;
+}
+
+@media screen and (max-width: 1200px) {
+  #form-story {
+    font-size: 0.75rem;
+  }
+  #story {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #form-story {
+    font-size: 0.5rem;
+  }
+  #story {
+    font-size: 0.75rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  #form-story {
+    font-size: 0.45rem;
+  }
+  #story {
+    font-size: 0.5rem;
+  }
 }/*# sourceMappingURL=story.css.map */
